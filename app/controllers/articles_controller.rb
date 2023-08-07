@@ -27,6 +27,18 @@ class ArticlesController < ApplicationController
       render json: {error: "Article not found"}, status: :not_found
     end
   end
+
+  def destroy
+    render json: {error: "Methods not allowed"}, status: :method_not_allowed
+  end
+
+  def update
+    render json: {error: "Methods not allowed"}, status: :method_not_allowed
+  end
+
+  def patch
+    render json: {error: "Methods not allowed"}, status: :method_not_allowed
+  end
   
   def article_params
     return params.permit(:title,
