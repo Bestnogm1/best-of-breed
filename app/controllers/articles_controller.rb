@@ -15,11 +15,19 @@ class ArticlesController < ApplicationController
       @article.save
       render json: @article, status: :created
     else
-      # render status: 422
       render json: { errors: @article.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
+  def show
+    begin
+    @article = Article.find(params[:id])
+    render json: @article
+    rescue ActiveRecord::RecordNotFound
+      render json: {error: "Article not found"}, status: :not_found
+    end
+  end
+  
   def article_params
     return params.permit(:title,
     :content,
