@@ -1,0 +1,15 @@
+{
+  "cSpell.enableFiletypes": [
+    "dotenv",
+    "ejs",
+    "erb",
+    "gemfile",
+    "go.mod",
+    "go.sum",
+    "go.work",
+    "postgres",
+    "ruby",
+    "sql",
+    "sqlite"
+  ]
+}

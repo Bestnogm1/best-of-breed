@@ -1,5 +1,11 @@
+=begin
+  https://guides.rubyonrails.org/routing.html
+  this is the routes file for the application as listed on the readme page
+  you are able to make a request to the server and get a response back and each are
+  mapped to a specific route and a controller action to go along with it
+=end
+
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "/articles", to: "articles#index"
   post "/articles", to: "articles#create"
   get "/articles/:id", to: "articles#show"

@@ -21,3 +21,4 @@ ActiveRecord::Schema.define(version: 2023_08_08_022844) do
   end
 
 end
+# this file is created by rails g model Article title:string content:string author:string category:string published_at:datetime field are as mention in the read me file
